@@ -36,25 +36,60 @@ const FinalCTA = () => {
         <p className="mt-3 text-muted-foreground">Solicite um orçamento e conte-nos sobre seu projeto.</p>
       </div>
 
-      <form onSubmit={onSubmit} className="mx-auto mt-8 max-w-2xl grid gap-4">
-        <div className="grid gap-2 sm:grid-cols-2">
-          <Input name="name" placeholder="Seu nome" required aria-label="Seu nome" />
-          <Input name="email" type="email" placeholder="Seu e-mail" required aria-label="Seu e-mail" />
+      <motion.form 
+        onSubmit={onSubmit} 
+        className="mx-auto mt-10 max-w-2xl grid gap-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="relative group">
+            <Input 
+              name="name" 
+              placeholder="Seu nome" 
+              required 
+              aria-label="Seu nome"
+              className="h-12 rounded-xl border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10"
+            />
+          </div>
+          <div className="relative group">
+            <Input 
+              name="email" 
+              type="email" 
+              placeholder="Seu e-mail" 
+              required 
+              aria-label="Seu e-mail"
+              className="h-12 rounded-xl border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10"
+            />
+          </div>
         </div>
-        <Textarea name="message" placeholder="Conte um pouco sobre a sua ideia" rows={5} required aria-label="Mensagem" />
-        <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-          <Button type="submit" size="lg" disabled={loading}>
-            Enviar mensagem
-            <Send className="ml-2" />
+        <div className="relative group">
+          <Textarea 
+            name="message" 
+            placeholder="Conte um pouco sobre a sua ideia" 
+            rows={5} 
+            required 
+            aria-label="Mensagem"
+            className="rounded-xl border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10 resize-none"
+          />
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
+          <Button type="submit" variant="tech" size="lg" disabled={loading} className="group">
+            <span className="relative z-10">
+              {loading ? "Enviando..." : "Enviar mensagem"}
+            </span>
+            <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
-          <Button asChild variant="secondary" size="lg">
+          <Button asChild variant="outline" size="lg" className="group">
             <a href={waLink} target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-              WhatsApp direto
-              <MessageCircle className="ml-2" />
+              <span className="relative z-10">WhatsApp direto</span>
+              <MessageCircle className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
             </a>
           </Button>
         </div>
-      </form>
+      </motion.form>
     </section>
   );
 };

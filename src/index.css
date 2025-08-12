@@ -8,94 +8,119 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Paleta tecnológica moderna */
+    --background: 222 47% 6%;
+    --foreground: 210 50% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 38% 8% / 0.8;
+    --card-foreground: 210 50% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 38% 8%;
+    --popover-foreground: 210 50% 98%;
 
-    /* Tech blue primary */
-    --primary: 224 76% 48%;
-    --primary-foreground: 210 40% 98%;
+    /* Azul neon tecnológico */
+    --primary: 220 100% 58%;
+    --primary-foreground: 222 47% 6%;
+    --primary-glow: 220 100% 65%;
+    --primary-bright: 220 100% 72%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Roxo tecnológico */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 210 50% 98%;
+    --secondary-glow: 262 83% 65%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Tons de apoio */
+    --muted: 215 30% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217 92% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 50% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 50% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 224 76% 48%;
+    --border: 215 30% 15%;
+    --input: 215 30% 15%;
+    --ring: 220 100% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 224 76% 48%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 222 38% 8%;
+    --sidebar-foreground: 210 50% 98%;
+    --sidebar-primary: 220 100% 58%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 215 30% 15%;
+    --sidebar-accent-foreground: 210 50% 98%;
+    --sidebar-border: 215 30% 15%;
+    --sidebar-ring: 220 100% 58%;
 
-    /* Extras: gradients, shadows, transitions */
-    --primary-glow: 224 88% 62%;
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--primary-glow) / 0.95));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
-    --shadow-elevate: 0 10px 30px -10px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.35);
+    /* Gradientes tecnológicos */
+    --gradient-primary: linear-gradient(135deg, hsl(220 100% 58%), hsl(262 83% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(262 83% 58%), hsl(292 84% 61%));
+    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 6%), hsl(222 40% 8%));
+    --gradient-tech: radial-gradient(circle at 50% 50%, hsl(220 100% 58% / 0.3), transparent 70%);
+    --gradient-mesh: conic-gradient(from 0deg at 50% 50%, 
+                      hsl(220 100% 58% / 0.3), 
+                      hsl(262 83% 58% / 0.3), 
+                      hsl(292 84% 61% / 0.3), 
+                      hsl(220 100% 58% / 0.3));
+
+    /* Sombras avançadas */
+    --shadow-tech: 0 0 50px hsl(220 100% 58% / 0.5), 0 0 100px hsl(220 100% 58% / 0.2);
+    --shadow-purple: 0 0 50px hsl(262 83% 58% / 0.4), 0 0 100px hsl(262 83% 58% / 0.15);
+    --shadow-elevate: 0 20px 40px -15px hsl(220 100% 58% / 0.4);
+    --shadow-glow: 0 0 60px hsl(220 100% 65% / 0.6);
+    --shadow-glass: 0 8px 32px hsl(220 100% 58% / 0.37);
+
+    /* Transições suaves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-micro: all 0.15s ease-out;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .light {
+    /* Versão light com tons tecnológicos */
+    --background: 210 50% 98%;
+    --foreground: 222 47% 11%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100% / 0.9;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220 100% 50%;
+    --primary-foreground: 210 50% 98%;
+    --primary-glow: 220 100% 58%;
+    --primary-bright: 220 100% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 262 83% 50%;
+    --secondary-foreground: 210 50% 98%;
+    --secondary-glow: 262 83% 58%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 262 83% 50%;
+    --accent-foreground: 210 50% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 50% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 217.2 91.2% 59.8%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 217.2 91.2% 59.8%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 220 100% 50%;
 
-    --primary-glow: 217.2 91.2% 59.8%;
-    --gradient-subtle: linear-gradient(180deg, hsl(222.2 84% 4.9%), hsl(222.2 70% 6%));
+    --gradient-primary: linear-gradient(135deg, hsl(220 100% 50%), hsl(262 83% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(262 83% 50%), hsl(292 84% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210 50% 98%), hsl(210 40% 96%));
+    --gradient-tech: radial-gradient(circle at 50% 50%, hsl(220 100% 50% / 0.1), transparent 70%);
+
+    --shadow-tech: 0 0 30px hsl(220 100% 50% / 0.3), 0 0 60px hsl(220 100% 50% / 0.1);
+    --shadow-purple: 0 0 30px hsl(262 83% 50% / 0.2), 0 0 60px hsl(262 83% 50% / 0.08);
+    --shadow-elevate: 0 10px 30px -10px hsl(220 100% 50% / 0.25);
+    --shadow-glow: 0 0 40px hsl(220 100% 58% / 0.4);
+    --shadow-glass: 0 8px 32px hsl(220 100% 50% / 0.25);
   }
 }
 
@@ -106,5 +131,93 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Microinterações globais */
+  .interactive-element {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .interactive-element:hover {
+    transform: translateY(-2px);
+  }
+
+  .tech-glow {
+    box-shadow: var(--shadow-tech);
+  }
+
+  .purple-glow {
+    box-shadow: var(--shadow-purple);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Background de partículas CSS */
+  .particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: var(--gradient-mesh);
+    animation: meshRotate 20s linear infinite;
+  }
+
+  .particles-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-tech);
+    animation: pulseGlow 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes meshRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes pulseGlow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Scroll customizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-secondary);
   }
 }

@@ -74,20 +74,12 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				},
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -112,6 +104,52 @@ export default {
 				'slide-out-right': {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(100%)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(220 100% 58% / 0.5)' },
+					'50%': { boxShadow: '0 0 40px hsl(220 100% 58% / 0.8), 0 0 60px hsl(220 100% 58% / 0.4)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'tech-reveal': {
+					'0%': { 
+						opacity: '0', 
+						transform: 'translateY(30px) scale(0.9)',
+						filter: 'blur(5px)'
+					},
+					'100%': { 
+						opacity: '1', 
+						transform: 'translateY(0px) scale(1)',
+						filter: 'blur(0px)'
+					}
+				},
+				'gradient-x': {
+					'0%, 100%': { 'background-position': '0% 50%' },
+					'50%': { 'background-position': '100% 50%' }
+				},
+				'shimmer': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'bounce-in': {
+					'0%': { 
+						transform: 'scale(0.3)', 
+						opacity: '0' 
+					},
+					'50%': { 
+						transform: 'scale(1.05)', 
+						opacity: '0.8' 
+					},
+					'70%': { 
+						transform: 'scale(0.9)', 
+						opacity: '1' 
+					},
+					'100%': { 
+						transform: 'scale(1)', 
+						opacity: '1' 
+					}
 				}
 			},
 			animation: {
@@ -123,8 +161,14 @@ export default {
 				'scale-out': 'scale-out 0.2s ease-out',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
 				'slide-out-right': 'slide-out-right 0.3s ease-out',
-				enter: 'fade-in 0.3s ease-out, scale-in 0.2s ease-out',
-				exit: 'fade-out 0.3s ease-out, scale-out 0.2s ease-out'
+				'enter': 'fade-in 0.3s ease-out, scale-in 0.2s ease-out',
+				'exit': 'fade-out 0.3s ease-out, scale-out 0.2s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite',
+				'tech-reveal': 'tech-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+				'gradient-x': 'gradient-x 3s ease infinite',
+				'shimmer': 'shimmer 2s infinite',
+				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
 			}
 		}
 	},

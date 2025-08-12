@@ -52,15 +52,26 @@ const Services = () => {
         {steps.map((s, i) => (
           <motion.article
             key={s.title}
-            className="rounded-lg border bg-card p-6 shadow-sm"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="glass-effect rounded-xl p-6 group hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.45, delay: i * 0.05 }}
+            transition={{ 
+              duration: 0.6, 
+              delay: i * 0.1,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
-            <s.icon className="text-primary" />
-            <h3 className="mt-4 font-semibold text-lg">{s.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            
+            <div className="relative z-10">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-secondary p-3 mb-4 group-hover:scale-110 transition-transform duration-300">
+                <s.icon className="w-full h-full text-primary-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">{s.title}</h3>
+              <p className="mt-3 text-muted-foreground leading-relaxed">{s.desc}</p>
+            </div>
           </motion.article>
         ))}
       </div>
