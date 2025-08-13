@@ -3,7 +3,14 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-wezt-tech.jpg";
 
 const Hero = () => {
-  const waNumber = "5547999999999"; // TODO: substitua pelo número oficial
+  console.log("Hero component is rendering");
+  
+  // Teste simples para garantir que está renderizando
+  if (typeof window !== "undefined") {
+    console.log("Window está disponível");
+  }
+  
+  const waNumber = "5547999999999";
   const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech,%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20landing%20page.`;
 
   return (
