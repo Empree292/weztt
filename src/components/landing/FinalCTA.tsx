@@ -8,7 +8,7 @@ import { toast } from "sonner";
 
 const FinalCTA = () => {
   const [loading, setLoading] = useState(false);
-  const waNumber = "5547999999999"; // TODO: substitua pelo número oficial
+  const waNumber = "5531971824188"; // TODO: substitua pelo número oficial
   const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech,%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20landing%20page.`;
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
