@@ -1,73 +1,69 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Sparkles, Zap } from "lucide-react";
-import styles from "@/styles/landing.module.css";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-wezt-tech.jpg";
-import { InteractiveBackground, TechShapes } from "@/components/ui/background-effects";
 
 const Hero = () => {
   const waNumber = "5547999999999"; // TODO: substitua pelo número oficial
   const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech,%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20landing%20page.`;
 
   return (
-    <header className={`${styles.heroGradient} relative overflow-hidden min-h-screen flex items-center`}>
-      <InteractiveBackground />
-      <TechShapes />
-      
-      <div className="container py-24 md:py-32 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-sm tracking-wider text-muted-foreground uppercase mb-6">
-              Wezt Tech
-            </p>
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
-              Landing pages que
-              <br />
-              <span className="text-primary">funcionam</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-              Desenvolvemos páginas focadas em conversão para empreendedores que querem resultados reais.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button asChild size="lg" className="min-w-[200px]">
-                <a href="#contato">
-                  Ver nosso trabalho
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
-              </Button>
-              <Button asChild variant="ghost" size="lg" className="min-w-[200px]">
-                <a href={waLink} target="_blank" rel="noopener">
-                  <MessageCircle className="mr-2 w-4 h-4" />
-                  WhatsApp
-                </a>
-              </Button>
+    <header className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+      <div className="container mx-auto px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Conteúdo Principal */}
+            <div className="text-center lg:text-left space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white">
+                  Landing pages que{" "}
+                  <span className="text-blue-600 dark:text-blue-400">
+                    funcionam
+                  </span>
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                  Desenvolvemos páginas focadas em conversão para empreendedores que querem resultados reais.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <a href="#contato">
+                    Solicitar Orçamento
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </a>
+                </Button>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-2 border-slate-300 dark:border-slate-600 px-8 py-4 text-lg font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300"
+                >
+                  <a href={waLink} target="_blank" rel="noopener">
+                    <MessageCircle className="mr-2 w-5 h-5" />
+                    WhatsApp
+                  </a>
+                </Button>
+              </div>
             </div>
-          </motion.div>
-        </div>
-        
-        <motion.div 
-          className="mt-20 max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <div className="relative rounded-2xl overflow-hidden border border-border/50">
-            <img
-              src={heroImg}
-              alt="Dashboard de analytics mostrando métricas de conversão"
-              className="w-full h-auto"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            
+            {/* Imagem */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src={heroImg}
+                  alt="Dashboard de analytics mostrando métricas de conversão"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </header>
   );

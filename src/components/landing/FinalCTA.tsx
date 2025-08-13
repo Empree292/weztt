@@ -26,10 +26,10 @@ const FinalCTA = () => {
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
           className="font-display text-3xl md:text-4xl font-bold"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           Pronto para crescer?
         </motion.h2>
@@ -39,8 +39,8 @@ const FinalCTA = () => {
       <motion.form 
         onSubmit={onSubmit} 
         className="mx-auto mt-10 max-w-2xl grid gap-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >

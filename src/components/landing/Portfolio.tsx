@@ -16,10 +16,10 @@ const Portfolio = () => {
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
           className="font-display text-3xl md:text-4xl font-bold"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           Portfólio
         </motion.h2>

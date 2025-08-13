@@ -27,10 +27,10 @@ const Testimonials = () => {
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
           className="font-display text-3xl md:text-4xl font-bold"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           Depoimentos
         </motion.h2>
@@ -41,10 +41,10 @@ const Testimonials = () => {
           <motion.blockquote
             key={t.name}
             className="rounded-lg border bg-card p-6 shadow-sm"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.45, delay: i * 0.05 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
           >
             <p className="text-sm text-muted-foreground">“{t.quote}”</p>
             <footer className="mt-4 text-sm font-medium">

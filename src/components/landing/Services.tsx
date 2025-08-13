@@ -30,19 +30,19 @@ const Services = () => {
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
           className="font-display text-3xl md:text-4xl font-bold"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           Nosso Processo de Criação
         </motion.h2>
         <motion.p
           className="mt-3 text-muted-foreground"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55, delay: 0.05 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           Passo a passo para desenvolver landing pages que performam de verdade.
         </motion.p>
@@ -53,15 +53,10 @@ const Services = () => {
           <motion.article
             key={s.title}
             className="glass-effect rounded-xl p-6 group hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
-            initial={{ opacity: 0, y: 30, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ 
-              duration: 0.6, 
-              delay: i * 0.1,
-              ease: [0.16, 1, 0.3, 1]
-            }}
-            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
