@@ -20,7 +20,11 @@ const About = () => {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Nossa missão é impulsionar empreendedores com landing pages que unem estratégia, estética e performance. Valorizamos a transparência, o cuidado com cada detalhe e a busca constante por resultados reais.
+          Nossa missão é transformar o potencial de empreendedores em resultados sólidos e duradouros. Criamos landing pages que unem estratégia inteligente, design envolvente e performance de alto nível, pensadas para atrair, converter e fidelizar clientes.
+
+Na Wezt Tech, acreditamos que cada detalhe importa: desde a escolha das cores e tipografia até a arquitetura da informação e otimização para conversão. Trabalhamos com transparência em cada etapa do processo, sempre com o cuidado de entender as necessidades únicas de cada negócio e oferecer soluções sob medida.
+
+Nosso compromisso vai além de entregar um site bonito — buscamos criar experiências digitais que impactam, inspiram e geram crescimento real para quem confia no nosso trabalho.
         </motion.p>
       </div>
     </section>
