@@ -10,9 +10,12 @@ const Hero = () => {
     console.log("Window está disponível");
   }
   
-  const waNumber = "5531981192979"; // Número de WhatsApp sem o +55
-  const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech,%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20landing%20page.`;
-
+   const waNumber = "5531981192979";
+  const waMessage = encodeURIComponent(
+    "Olá Wezt Tech! Gostaria de um orçamento para uma landing page profissional. Meu objetivo é aumentar minha presença digital e atrair mais clientes. Podem me ajudar?"
+  );
+  const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+  
   return (
    <header className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-950 to-blue-800 dark:from-blue-950 dark:to-blue-900">
   <div className="container mx-auto px-6 py-20">
