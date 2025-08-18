@@ -7,7 +7,7 @@ import { MessageCircle, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const FinalCTA = () => {
-  const waNumber = "5531971824188"; 
+  const waNumber = "5531981192979"; 
   const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech!%20Quero%20impulsionar%20meu%20neg%C3%B3cio%20com%20uma%20landing%20page%20profissional.%20Podem%20me%20ajudar?`;
 
   return (
