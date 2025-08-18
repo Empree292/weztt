@@ -10,7 +10,7 @@ const Hero = () => {
     console.log("Window está disponível");
   }
   
-  const waNumber = "5531971824188"; // Número de WhatsApp sem o +55
+  const waNumber = "5531981192979"; // Número de WhatsApp sem o +55
   const waLink = `https://wa.me/${waNumber}?text=Ol%C3%A1%20Wezt%20Tech,%20gostaria%20de%20um%20or%C3%A7amento%20para%20uma%20landing%20page.`;
 
   return (
